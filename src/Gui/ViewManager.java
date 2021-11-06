@@ -1,9 +1,11 @@
 package Gui;
 
 import Gui.Elements.MyButton;
+import Gui.Elements.MySubscene;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -21,6 +23,11 @@ public class ViewManager {
     private final static int MENU_BUTTONS_START_X = 100;
     private final static int MENU_BUTTONS_START_Y = 150;
 
+    private MySubscene creditsScene;
+    private MySubscene playerScene;
+
+    private MySubscene sceneActive;
+
     List<MyButton> menuButtons;
 
     public ViewManager() {
@@ -30,9 +37,30 @@ public class ViewManager {
         mainScene = new Scene(mainPane, WIDTH, HEIGHT);
         mainStage = new Stage();
         mainStage.setScene(mainScene);
+        createSubScenes();
         createButtons();
         createBackground();
-        //createListPane();
+
+    }
+
+    private void showSubScene(MySubscene subscene) {
+
+        if (sceneActive != null) {
+            sceneActive.moveSubScene();
+        }
+
+        subscene.moveSubScene();
+        sceneActive = subscene;
+
+    }
+
+    private void createSubScenes() {
+
+        playerScene = new MySubscene();
+        mainPane.getChildren().add(playerScene);
+
+        creditsScene = new MySubscene();
+        mainPane.getChildren().add(creditsScene);
 
     }
 
@@ -64,12 +92,26 @@ public class ViewManager {
         MyButton startButton = new MyButton("Spiel Starten");
         addMenuButton(startButton);
 
+        startButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                showSubScene(playerScene);
+            }
+        });
+
     }
 
     private void createCreditsButton() {
 
         MyButton creditsButton = new MyButton("Credits");
         addMenuButton(creditsButton);
+
+        creditsButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                showSubScene(creditsScene);
+            }
+        });
 
     }
 
@@ -78,16 +120,12 @@ public class ViewManager {
         MyButton exitButton = new MyButton("Schließen");
         addMenuButton(exitButton);
 
-    }
-
-    private void createListPane() {
-
-        ImageView pane = new ImageView("/Gui/Resources/panel_beige.png");
-        pane.setLayoutX(400);
-        pane.setLayoutY(150);
-        //pane.setScaleX(2.5);
-        //pane.setScaleY(2.5);
-        mainPane.getChildren().add(pane);
+        exitButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                mainStage.close();
+            }
+        });
 
     }
 

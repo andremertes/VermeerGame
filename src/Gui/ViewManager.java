@@ -1,5 +1,6 @@
 package Gui;
 
+import Gui.Elements.MyButton;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -18,12 +19,20 @@ public class ViewManager {
         mainScene = new Scene(mainPane, WIDTH, HEIGHT);
         mainStage = new Stage();
         mainStage.setScene(mainScene);
+        createButton();
 
     }
 
     public Stage getMainStage() {
 
         return mainStage;
+
+    }
+
+    private void createButton() {
+
+        MyButton button = new MyButton("Hallo!");
+        mainPane.getChildren().add(button);
 
     }
 

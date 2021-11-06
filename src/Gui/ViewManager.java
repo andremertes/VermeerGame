@@ -1,7 +1,9 @@
 package Gui;
 
 import Gui.Elements.MyButton;
+import Gui.Elements.MyLabel;
 import Gui.Elements.MySubscene;
+import Gui.Elements.MyTextarea;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -56,11 +58,37 @@ public class ViewManager {
 
     private void createSubScenes() {
 
-        playerScene = new MySubscene();
-        mainPane.getChildren().add(playerScene);
+        createCreditsSubscene();
+        createPlayerCreatorSubscene();
+
+    }
+
+    private void createCreditsSubscene() {
 
         creditsScene = new MySubscene();
         mainPane.getChildren().add(creditsScene);
+
+        MyLabel label = new MyLabel("Credits");
+        label.setLayoutX(110);
+        label.setLayoutY(25);
+        creditsScene.getPane().getChildren().add(label);
+
+        MyTextarea people = new MyTextarea("Copyright 2021 by Raphael Kropp und Andre Mertes. Universität Trier. FB IV - Informatikwissenschaften. GdP1b - JProf. Benjamin Weyers");
+        people.setLayoutX(110);
+        people.setLayoutY(110);
+        creditsScene.getPane().getChildren().add(people);
+
+    }
+
+    private void createPlayerCreatorSubscene() {
+
+        playerScene = new MySubscene();
+        mainPane.getChildren().add(playerScene);
+
+        MyLabel label = new MyLabel("Spieler Hinzufügen");
+        label.setLayoutX(110);
+        label.setLayoutY(25);
+        playerScene.getPane().getChildren().add(label);
 
     }
 

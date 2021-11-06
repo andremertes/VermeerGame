@@ -11,7 +11,7 @@ public class MySubscene extends SubScene {
     private final static String FONT_PATH = "src/Gui/Resources/MedievalSharp-Regular.ttf";
     private final static String BACKGROUND_IMAGE = "/Gui/Resources/panel_beige.png";
 
-    private boolean isHidden;
+    private boolean isHidden = true;
 
     public MySubscene() {
 
@@ -45,6 +45,12 @@ public class MySubscene extends SubScene {
         }
 
         transition.play();
+
+    }
+
+    public AnchorPane getPane() {
+
+        return (AnchorPane) this.getRoot();
 
     }
 

@@ -6,6 +6,7 @@ import Gui.Elements.MySubscene;
 import Gui.Elements.MyTextarea;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
@@ -42,6 +43,9 @@ public class ViewManager {
         createSubScenes();
         createButtons();
         createBackground();
+
+        Image cursorImage = new Image("/Gui/Resources/cursorHand_blue.png");
+        mainScene.setCursor(new ImageCursor(cursorImage));
 
     }
 

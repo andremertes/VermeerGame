@@ -8,15 +8,24 @@ import java.util.HashMap;
 
 public class Player {
 
-    private double money = 50000;
-    private boolean kunstKenner = false;
-    private boolean isInGame = true;
-    private double hypothek = 0;
+    private String name;
+    private double money;
+    private int knowledge;
+    private boolean isInGame;
+    private double hypothek;
     private HashMap<Integer, Plantage> plantagen = new HashMap<Integer, Plantage>();
     private HashMap<Integer, Aktie> aktien = new HashMap<Integer,Aktie>();
     private HashMap<Integer, Gemaelde> gemaelde = new HashMap<Integer,Gemaelde>();
 
-    public Player() {}
+    public Player(String name) {
+
+        this.name = name;
+        this.money = 50000;
+        this.knowledge = 0;
+        this.isInGame = true;
+        this.hypothek = 0;
+
+    }
 
     public double getMoney() {
 
@@ -140,13 +149,13 @@ public class Player {
 
     public void setEducatedKunstgutachter() {
 
-        this.kunstKenner = true;
+        this.knowledge++;
 
     }
 
-    public boolean getKunstKennerStatus() {
+    public int getKunstKennerStatus() {
 
-        return this.kunstKenner;
+        return this.knowledge;
 
     }
 

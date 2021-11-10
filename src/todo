@@ -1,0 +1,2 @@
+- Spieler -> 4 Stück. Wahlweise Mensch (oder KI? Haben wir die Zeit dazu?) => Array
+- Gemälde... Es gibt Originale und Fälschungen => hashtable, wegen dem einfachen Finden

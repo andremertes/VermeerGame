@@ -16,7 +16,7 @@ import java.io.FileNotFoundException;
 public class MyLabel extends Label {
 
     final static String FONT_PATH = "src/Gui/Resources/MedievalSharp-Regular.ttf";
-    private final static String BACKGROUND_IMAGE = "/Gui/Resources/buttonLong_grey_pressed.png";
+    private final static String BACKGROUND_IMAGE = "/Gui/Resources/buttonLong_grey_pressed.png";    // buttonLong_blue_pressed ??
 
     public MyLabel(String text) {
 
@@ -37,7 +37,7 @@ public class MyLabel extends Label {
 
         try {
 
-            setFont(Font.loadFont(new FileInputStream(FONT_PATH), 23));
+            setFont(Font.loadFont(new FileInputStream(FONT_PATH), 40));
 
         } catch (FileNotFoundException e) {
 

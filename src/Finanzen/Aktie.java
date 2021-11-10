@@ -1,4 +1,4 @@
-package Aktien;
+package Finanzen;
 
 /**
  * Aktien

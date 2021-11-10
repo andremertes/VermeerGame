@@ -1,6 +1,6 @@
 package Player;
 
-import Aktien.Aktie;
+import Finanzen.Aktie;
 import Gemaelde.Gemaelde;
 import Plantage.Plantage;
 

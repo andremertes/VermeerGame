@@ -47,6 +47,12 @@ public class Plantage { // represents the land where the player builds fields an
 
     }
 
+    public MyField getField(int posX, int posY) {
+
+        return this.field[posY][posX];
+
+    }
+
 
 
 }

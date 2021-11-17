@@ -9,7 +9,7 @@
     - Schule
     - Pferderennen
 
-#TODO Wie funktioniert die kalenderbasierte Spielerzugreihenfolge?
+#TODO Wie funktioniert die kalenderbasierte Spielerzugreihenfolge? -> Der, der am weitesten zurück liegt ist dran. Jeden Tag in Reihenfolge abklappern. Kreuzfahrt -> 14d Pause (bspw...)
 
 #TODO Spieler, Gemälde, Plantagen, Aktien, Bank, Auktionshaus, Städte/Orte, Pferderennen, Welt, Weiterbildung, Reisen/Transportmittel, Spiellogik, GUI
 

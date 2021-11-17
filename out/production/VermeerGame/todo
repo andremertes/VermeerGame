@@ -1,0 +1,14 @@
+#TODO Spieler -> 4 Stück. Wahlweise Mensch (oder KI? Haben wir die Zeit dazu?) => Array
+#TODO Gemälde... Es gibt Originale und Fälschungen => hashtable, wegen dem einfachen Finden
+#TODO Scenen
+    - Auktion
+    - Weltkarte -> Reisen
+    - Plantage
+    - Städte
+    - Bank
+    - Schule
+    - Pferderennen
+
+#TODO Wie funktioniert die kalenderbasierte Spielerzugreihenfolge?
+
+#TODO Spieler, Gemälde, Plantagen, Aktien, Bank, Auktionshaus, Städte/Orte, Pferderennen, Welt, Weiterbildung, Reisen/Transportmittel, Spiellogik, GUI

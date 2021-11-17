@@ -25,6 +25,7 @@ public class Gemaelde {
 
     }
 
+    // Generelles Fakelevel... Unabhängig von Spieler-Knowledge
     private int generateFakeLevel() {
 
         return (int) Math.random() * (Player.KNOWLEDGE_LEVELS + 1);

@@ -9,7 +9,9 @@ import java.util.HashMap;
 public class Player {
 
     public static int KNOWLEDGE_LEVELS = 3; // Max knowledge that Player can get...
-    private final double START_MONEY = 50000d;
+    private final double START_MONEY = 50000d; // Start Money
+
+    private long timeLine;
     private String name;
     private double money;
     private int knowledge;
@@ -18,7 +20,6 @@ public class Player {
     private HashMap<Integer, Plantage> plantagen = new HashMap<Integer, Plantage>();
     private HashMap<Integer, Aktie> aktien = new HashMap<Integer,Aktie>();
     private HashMap<Integer, Gemaelde> gemaelde = new HashMap<Integer,Gemaelde>();
-
     public Player(String name) {
 
         this.name = name;
@@ -177,6 +178,14 @@ public class Player {
 
         this.isInGame = false;
 
+    }
+
+    public long getTimeLine() {
+        return timeLine;
+    }
+
+    public void setTimeLine(long timeLine) {
+        this.timeLine = timeLine;
     }
 
 }

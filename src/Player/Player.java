@@ -9,10 +9,9 @@ import java.util.HashMap;
 public class Player {
 
     public static int KNOWLEDGE_LEVELS = 3; // Max knowledge that Player can get...
-    private final double START_MONEY = 50000d;
+    private final double START_MONEY = 50000d; // Start Money
 
     private long timeLine;
-
     private String name;
     private double money;
     private int knowledge;

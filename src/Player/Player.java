@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 public class Player {
 
+    public static int KNOWLEDGE_LEVELS = 3;
     private final double START_MONEY = 50000d;
     private String name;
     private double money;

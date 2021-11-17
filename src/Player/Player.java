@@ -5,32 +5,26 @@ import Gemaelde.Gemaelde;
 import Plantage.Plantage;
 
 import java.util.HashMap;
-import java.util.Vector;
 
 public class Player {
 
-    public static final int KNOWLEDGE_LEVELS = 3;
-
+    private final double START_MONEY = 50000d;
     private String name;
     private double money;
     private int knowledge;
     private boolean isInGame;
     private double hypothek;
-    private HashMap<Integer, Plantage> plantagen;
-    private HashMap<Integer, Aktie> aktien;
-    // private HashMap<Integer, Gemaelde> gemaelde = new HashMap<Integer,Gemaelde>();
-    private Vector paintings;
+    private HashMap<Integer, Plantage> plantagen = new HashMap<Integer, Plantage>();
+    private HashMap<Integer, Aktie> aktien = new HashMap<Integer,Aktie>();
+    private HashMap<Integer, Gemaelde> gemaelde = new HashMap<Integer,Gemaelde>();
 
     public Player(String name) {
 
         this.name = name;
-        this.money = 50000;
+        this.money = START_MONEY;
         this.knowledge = 0;
         this.isInGame = true;
         this.hypothek = 0;
-        this.paintings = new Vector();
-        this.plantagen = new HashMap<Integer, Plantage>();
-        this.aktien = new HashMap<Integer, Aktie>();
 
     }
 
@@ -104,37 +98,27 @@ public class Player {
 
     }
 
-    public void addGemaelde(/*int i,*/ Gemaelde g) {
+    public void addGemaelde(int i, Gemaelde g) {
 
-        //this.gemaelde.put(i,g);
-        this.paintings.add(g);
+        this.gemaelde.put(i,g);
 
     }
 
     public void removeGemaelde(int i) {
 
-        //this.gemaelde.remove(i);
-        this.paintings.remove(i);
+        this.gemaelde.remove(i);
 
     }
 
-    /*public Gemaelde getGemaelde(int i) {
+    public Gemaelde getGemaelde(int i) {
 
-        //return this.gemaelde.get(i);
-        return this.paintings.get(i);
-
-    }*/
-
-    public Object getGemaelde(int i) {
-
-        return this.paintings.get(i);
+        return this.gemaelde.get(i);
 
     }
 
     public int getAnzahlGemaelde() {
 
-        //return this.gemaelde.size();
-        return this.paintings.size();
+        return this.gemaelde.size();
 
     }
 

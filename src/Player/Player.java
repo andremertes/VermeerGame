@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 public class Player {
 
+    private final double START_MONEY = 50000d;
     private String name;
     private double money;
     private int knowledge;
@@ -20,7 +21,7 @@ public class Player {
     public Player(String name) {
 
         this.name = name;
-        this.money = 50000;
+        this.money = START_MONEY;
         this.knowledge = 0;
         this.isInGame = true;
         this.hypothek = 0;

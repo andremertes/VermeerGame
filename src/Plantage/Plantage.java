@@ -14,6 +14,11 @@ public class Plantage { // represents the land where the player builds fields an
         plants = new Plant[2];
         //field = new MyField[16][16];
         field = new MyField[5][5];
+        for(int i = 0; i< 5;i++){
+            for (int j = 0 ; j<5;j++){
+                field[i][j]= new Grass();
+            }
+        }
         this.location = loc;
         setPlants();
 

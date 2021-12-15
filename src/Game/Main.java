@@ -23,7 +23,7 @@ public class Main extends Application {
 
             ViewManager manager = new ViewManager();
             primaryStage = manager.getMainStage();
-            primaryStage.setTitle("Vermeer - Die Kunst zu erben! by Raphael Kropp und Andre Mertes");
+            primaryStage.setTitle("Vermeer - Die Kunst zu erben! by Raphael Kropp, Nils Lamberty und Andre Mertes");
             primaryStage.show();
 
         } catch (Exception e) {

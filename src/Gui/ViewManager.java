@@ -77,7 +77,7 @@ public class ViewManager {
         label.setLayoutY(25);
         creditsScene.getPane().getChildren().add(label);
 
-        MyTextarea people = new MyTextarea("Copyright 2021 by Raphael Kropp und Andre Mertes. Universität Trier. FB IV - Informatikwissenschaften. GdP1b - JProf. Benjamin Weyers");
+        MyTextarea people = new MyTextarea("Copyright 2021 by Raphael Kropp, Nils Lamberty und Andre Mertes. Universität Trier. FB IV - Informatikwissenschaften. GdP1b - JProf. Dr. Benjamin Weyers");
         people.setLayoutX(110);
         people.setLayoutY(110);
         creditsScene.getPane().getChildren().add(people);

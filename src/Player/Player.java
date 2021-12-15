@@ -17,7 +17,7 @@ public class Player {
     private int knowledge;
     private boolean isInGame;
     private double hypothek;
-    private HashMap<Integer, Plantage> plantagen = new HashMap<Integer, Plantage>();
+    private HashMap<Integer, Plantage> plantagen = new HashMap<Integer, Plantage>();    // @TODO andere Datenstruktur geeigneter?
     private HashMap<Integer, Aktie> aktien = new HashMap<Integer,Aktie>();
     private HashMap<Integer, Gemaelde> gemaelde = new HashMap<Integer,Gemaelde>();
     public Player(String name) {

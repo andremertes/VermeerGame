@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/VermeerGame.iml" filepath="$PROJECT_DIR$/VermeerGame.iml" />
+      <module fileurl="file:///Library/Java/Extensions/javafx-sdk-18/lib/lib.iml" filepath="/Library/Java/Extensions/javafx-sdk-18/lib/lib.iml" />
     </modules>
   </component>
 </project>
